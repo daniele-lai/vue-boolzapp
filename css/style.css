@@ -135,6 +135,50 @@
   overflow-y: scroll;
 }
 
+.container_messages {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.sent {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.received {
+  display: flex;
+  flex-direction: row;
+}
+
+.message {
+  position: relative;
+  padding: 18px 15px;
+  max-width: 50%;
+  min-width: 40%;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.message::after {
+  content: "29/03/2021 16:22:55";
+  color: #787F82;
+  font-size: 10px;
+  position: absolute;
+  bottom: 3px;
+  right: 8px;
+}
+
+.sent .message {
+  background-color: #D5F9BA;
+}
+
+.received .message {
+  background-color: #fff;
+}
+
 .type {
   height: 10%;
   display: flex;

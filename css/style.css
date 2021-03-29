@@ -22,7 +22,7 @@
   background: linear-gradient(to top, #DBDBD2 86%, #009688 86%);
 }
 
-.app {
+#app {
   display: flex;
   width: 80%;
   height: 95%;
@@ -132,7 +132,7 @@
 .messages {
   height: 80%;
   background-image: url(../img/mine.jpg);
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .type {

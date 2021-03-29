@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="app">
+    <div id="app">
       <div class="left">
         <div class="header ten_pd">
           <div class="account">
@@ -38,37 +38,9 @@
         </div>
         <div class="search"></div>
         <div class="contacts">
-          <div class="friends">
-            <img src="img/avatar_1.jpg" alt="Foto profilo">
-            <span class="bold">Michele</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_2.jpg" alt="Foto profilo">
-            <span class="bold">Fabio</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_3.jpg" alt="Foto profilo">
-            <span class="bold">Samuele</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_4.jpg" alt="Foto profilo">
-            <span class="bold">Luisa</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_5.jpg" alt="Foto profilo">
-            <span class="bold">Gianmichele</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_6.jpg" alt="Foto profilo">
-            <span class="bold">Gianluisa</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_7.jpg" alt="Foto profilo">
-            <span class="bold">Gianfabio</span>
-          </div>
-          <div class="friends">
-            <img src="img/avatar_8.jpg" alt="Foto profilo">
-            <span class="bold">Giansamuele</span>
+          <div v-for="contact in contacts" class="friends">
+            <img :src="`img/avatar${contact.avatar}.jpg`" alt="Foto profilo">
+            <span class="bold">{{contact.name}}</span>
           </div>
         </div>
       </div>
@@ -97,5 +69,7 @@
     </div>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>

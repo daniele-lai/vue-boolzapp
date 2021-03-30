@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Classi varie */
 .ten_pd {
   padding: 10px;
 }
@@ -30,6 +31,7 @@
   font-family: 'Lato', sans-serif;
 }
 
+/* left sidebar */
 .left {
   width: 35%;
   height: 100%;
@@ -98,6 +100,7 @@
   background-color: #EAEAEA;
 }
 
+/* Sezione contatti */
 .contacts {
   height: 73%;
   background-color: #fff;
@@ -120,6 +123,7 @@
   margin-right: 15px;
 }
 
+/* Main */
 .right {
   width: 65%;
   height: 100%;
@@ -129,6 +133,7 @@
   display: flex;
 }
 
+/* Sezione messaggi */
 .messages {
   height: 80%;
   background-image: url(../img/mine.jpg);
@@ -179,6 +184,7 @@
   background-color: #fff;
 }
 
+/* Input messaggi */
 .type {
   height: 10%;
   display: flex;

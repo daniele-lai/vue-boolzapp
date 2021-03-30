@@ -15,6 +15,7 @@
 <body>
   <div class="container">
     <div id="app">
+      <!-- Left Sidebar  -->
       <div class="left">
         <div class="header ten_pd">
           <div class="account">
@@ -37,19 +38,21 @@
           </div>
         </div>
         <div class="search"></div>
+        <!-- Sezione contatti -->
         <div class="contacts">
-          <div v-for="contact in contacts" class="friends">
+          <div v-for="(contact, index) in contacts" class="friends" @click="contactIndex = index">
             <img :src="`img/avatar${contact.avatar}.jpg`" alt="Foto profilo">
             <span class="bold">{{contact.name}}</span>
           </div>
         </div>
       </div>
+      <!-- Main -->
       <div class="right">
         <div class="header ten_pd">
           <div class="account_right bold">
-            <img src="img/avatar_1.jpg" alt="Foto profilo">
+            <img :src="`img/avatar${contacts[contactIndex]['avatar']}.jpg`" alt="Foto profilo">
             <div class="account_name_right ten_pd">
-              <span>Michele</span>
+              <span>{{contacts[contactIndex]["name"]}}</span>
               <p><small class="grey">Ultimo accesso oggi alle</small></p>
             </div>
           </div>
@@ -59,12 +62,14 @@
             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </div>
+        <!-- Sezione messaggi -->
         <div class="messages">
           <div class="container_messages">
-            <div class="sent"><p class="message">Hai portato a spasso il cane?</p></div>
-            <div class="received"><p class="message">Tutto fatto!</p></div>
+            <div class="sent"><p class="message"></p></div>
+            <div class="received"><p class="message"></p></div>
           </div>
         </div>
+        <!-- Input messaggi -->
         <div class="type">
           <a href="#"><i class="far fa-smile"></i></a>
           <input class="input_type ten_pd" type="text" placeholder="Scrivi un messaggio">

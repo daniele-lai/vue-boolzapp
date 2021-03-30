@@ -147,10 +147,11 @@
 }
 
 .balloon {
+  position: relative;
   border-radius: 10px;
   max-width: 50%;
-  min-width: 40%;
-  padding: 18px 15px;
+  min-width: 43%;
+  padding: 22px 15px;
   font-weight: 700;
   margin: 5px 0;
 }
@@ -174,6 +175,13 @@
 
  .message .received {
   background-color: #fff;
+}
+
+.date_message {
+  position: absolute;
+  bottom: 3px;
+  right: 5px;
+  color: #B1B1B1;
 }
 
 /* Input messaggio */

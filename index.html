@@ -37,7 +37,11 @@
             <a href="#"><p><small class="active_notification bold">Attiva notifiche desktop</small></p></a>
           </div>
         </div>
-        <div class="search"></div>
+        <div class="search">
+            <label class="label_chat" for="search"><i class="fas fa-search"></i>
+              <input class="input_chat" type="text" name="search" placeholder="Cerca o inizia una nuova chat">
+            </label>
+        </div>
         <!-- Sezione contatti -->
         <div class="contacts">
           <div v-for="(contact, index) in contacts" class="friends" @click="contactIndex = index">
@@ -66,7 +70,7 @@
         <div class="messages">
           <div class="container_messages">
             <div class="message">
-              <p v-for="item in contacts[contactIndex]['messages']" :class="item.status == 'sent'? 'sent' : 'received'" class="balloon">{{item.message}} <small class="date_message">{{item.date}}</small> </p>
+              <p v-for="item in contacts[contactIndex]['messages']" :class="item.status == 'sent'? 'sent' : 'received'" class="balloon">{{item.message}} <small class="date_message">{{item.date}}</small></p>
             </div>
           </div>
         </div>

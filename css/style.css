@@ -148,26 +148,31 @@
   padding-top: 50px;
 }
 
+.balloon {
+  border-radius: 10px;
+  max-width: 50%;
+  min-width: 40%;
+  padding: 18px 15px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
 .sent {
-  display: flex;
-  flex-direction: row-reverse;
+  position: relative;
+  align-self: flex-end;
 }
 
 .received {
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  align-self: flex-start;
 }
 
 .message {
-  position: relative;
-  padding: 18px 15px;
-  max-width: 50%;
-  min-width: 40%;
-  border-radius: 10px;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
 }
 
-.message::after {
+.sent::after, .received::after {
   content: "29/03/2021 16:22:55";
   color: #787F82;
   font-size: 10px;
@@ -176,15 +181,15 @@
   right: 8px;
 }
 
-.sent .message {
+ .message .sent {
   background-color: #D5F9BA;
 }
 
-.received .message {
+ .message .received {
   background-color: #fff;
 }
 
-/* Input messaggi */
+/* Input messaggio */
 .type {
   height: 10%;
   display: flex;

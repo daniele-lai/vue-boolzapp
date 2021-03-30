@@ -65,8 +65,9 @@
         <!-- Sezione messaggi -->
         <div class="messages">
           <div class="container_messages">
-            <div class="message"><p v-for="item in contacts[contactIndex]['messages']" v-if="item.status == 'sent'" class="balloon sent">{{item.message}}</p></div>
-            <div class="message"><p v-for="item in contacts[contactIndex]['messages']" v-if="item.status == 'received'" class="balloon received">{{item.message}}</p></div>
+            <div class="message">
+              <p v-for="item in contacts[contactIndex]['messages']" :class="item.status == 'sent'? 'sent' : 'received'" class="balloon">{{item.message}}</p>
+            </div>
           </div>
         </div>
         <!-- Input messaggi -->

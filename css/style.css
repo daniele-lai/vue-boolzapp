@@ -96,24 +96,30 @@
 }
 
 .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 7%;
   background-color: #EAEAEA;
 }
 
 .label_chat {
-  padding: 15px 23px;
+  height: 50%;
+  padding: 3px 23px;
   color: #B1B1B1;
   background-color: #fff;
   vertical-align: middle;
-  margin-left: 10px;
+  border-radius: 5px 0 0 5px;
 }
 
 .input_chat {
-  height: 40px;
-  width: 82%;
+  height: 50%;
+  width: 75%;
   border: none;
   border-left: 1px solid #EAEAEA;
-  margin-top: 15px;
+  margin-left: -3px;
+  padding-left: 10px;
+  border-radius: 0 5px 5px 0px;
 }
 
 .input_chat:focus {

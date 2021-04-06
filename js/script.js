@@ -82,6 +82,34 @@ var app = new Vue({
             ],
         },
     ],
-    contactIndex: 0
+    contactIndex: 0,
+    answer: ""
+  },
+  methods: {
+    // Aggiunta funzione per aggiungere messaggi
+    addAnswer: function() {
+      if (this.answer !== "") {
+        let newObj = {
+          date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+          message: this.answer,
+          status: 'sent'
+        }
+
+        this.answer = "";
+
+        this.contacts[this.contactIndex].messages.push(newObj);
+
+        // Funzione di risposta automatica
+        setTimeout(() => {
+          let newObj = {
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            message: "ok",
+            status: 'received'
+          }
+
+          this.contacts[this.contactIndex].messages.push(newObj);
+        }, 1000);
+      }
+    }
   }
 })

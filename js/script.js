@@ -83,7 +83,8 @@ var app = new Vue({
         },
     ],
     contactIndex: 0,
-    answer: ""
+    answer: "",
+    searchBar:""
   },
   methods: {
     // Aggiunta funzione per aggiungere messaggi
@@ -110,6 +111,14 @@ var app = new Vue({
           this.contacts[this.contactIndex].messages.push(newObj);
         }, 1000);
       }
+    }
+  },
+  computed: {
+    // Aggiunta funzione per filtrare contatti
+    contactFilter: function () {
+      return this.contacts.filter((contact) => {
+        return contact.name.toLowerCase().includes(this.searchBar.toLowerCase());
+      });
     }
   }
 })
